@@ -5,46 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>🚀 Менеджер задач</h1>
-            <div id="user-info"></div>
-        </header>
+        <h1>📝 Список задач</h1>
         
-        <div class="tabs">
-            <button class="tab-btn active" data-tab="tasks">Мои задачи</button>
-            <button class="tab-btn" data-tab="team">Команда</button>
+        <div class="task-form">
+            <input type="text" id="task-input" placeholder="Введите задачу...">
+            <button id="add-btn">Добавить</button>
         </div>
         
-        <div id="tasks-tab" class="tab-content active">
-            <div class="task-filters">
-                <button class="filter-btn active" data-status="all">Все</button>
-                <button class="filter-btn" data-status="pending">Активные</button>
-                <button class="filter-btn" data-status="completed">Завершенные</button>
-            </div>
-            
-            <div id="tasks-list" class="tasks-container"></div>
-            
-            <div class="add-task-form">
-                <input type="text" id="task-input" placeholder="Новая задача...">
-                <button id="add-task-btn">Добавить</button>
-            </div>
-        </div>
-        
-        <div id="team-tab" class="tab-content">
-            <h2>Участники команды</h2>
-            <div id="team-members"></div>
-            
-            <div class="add-member-form">
-                <input type="text" id="member-input" placeholder="@username">
-                <button id="add-member-btn">Добавить</button>
-            </div>
-        </div>
+        <div id="tasks-list"></div>
     </div>
-    
+
     <script src="app.js"></script>
 </body>
 </html>
